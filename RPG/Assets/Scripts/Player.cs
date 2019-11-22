@@ -11,7 +11,7 @@ public class Player : Character
     public void Start()
 	{
         hitPoints.value = startingHitPoints;
-        //inventory = Instantiate(inventoryPrefab);
+        inventory = Instantiate(inventoryPrefab);
         healthBar = Instantiate(healthBarPrefab);
         healthBar.character = this;
 	}
