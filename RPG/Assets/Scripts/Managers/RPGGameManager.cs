@@ -25,8 +25,6 @@ public class RPGGameManager : MonoBehaviour
 
     void Start()
     {
-        // Consolidate all the logic to setup a scene inside a single method. 
-        // This makes it easier to call again in the future, in places other than the Start() method.
         SetupScene();
     }
 
@@ -43,5 +41,12 @@ public class RPGGameManager : MonoBehaviour
             cameraManager.virtualCamera.Follow = player.transform;
         }
     }
-
+    
+    void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
 }
